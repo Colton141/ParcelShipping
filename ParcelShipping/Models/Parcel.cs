@@ -4,33 +4,36 @@ namespace ParcelShipping.Models
 {
   public class Parcel
   {
-    private string _description;
+    public string Height { get; set;}
+    //Height is still the private string _height
+    public string Width { get; set;}
+    public string Length { get; set;}
+    public string Weight { get; set;}
+
     private static List<Parcel> _instances = new List<Parcel> {};
-
-
-    public string GetDescription()
-    {
-      return _description;
-    }
-
-    public void SetDescription(string newDescription)
-    {
-      _description = newDescription;
-    }
 
     public static List<Parcel> GetAll()
     {
       return _instances;
     }
 
-    public Parcel (string description)
+    public Parcel (string height, string width, string length, string weight)
     {
-      _description = description;
+      Height = height;
+      Width = width;
+      Length = length;
+      Weight = weight;
       _instances.Add(this);
+      int newVolume = GetVolume();
+      Console.WriteLine(newVolume);
     }
     public static void ClearAll()
     {
       _instances.Clear();
+    }
+    public int GetVolume()
+    {
+     return height * width * length;
     }
   }
 }

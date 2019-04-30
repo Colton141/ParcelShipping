@@ -6,11 +6,21 @@
   </head>
     <body>
     <h1>Marina's super-dupper fast parcel shipping!</h1>
+    <p>Enter the package specifics below to get a shipping price</p>
 
     <form action="/parcels" method="post">
 
-      <label for="description">Add Shippment</label>
-      <input id="description" name="description" type="text">
+      <label for="height">add package height in inches</label>
+      <input id="height" name="height" type="number"><br>
+
+      <label for="width">add package width in inches</label>
+      <input id="width" name="width" type="number"><br>
+
+      <label for="length">add package length in inches</label>
+      <input id="length" name="length" type="number"><br>
+
+      <label for="weight">add package weight rounded to nearest pound</label>
+      <input id="weight" name="weight" type="number"><br>
 
       <button type="submit">Submit</button>
     </form>

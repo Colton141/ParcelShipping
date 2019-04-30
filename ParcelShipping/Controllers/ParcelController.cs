@@ -19,9 +19,9 @@ namespace ParcelShipping.Controllers
       return View();
     }
     [HttpPost("/parcels")]
-    public ActionResult Create(string description)
+    public ActionResult Create(string height, string width, string length, string weight)
     {
-      Parcel myParcel = new Parcel(description);
+      Parcel myParcel = new Parcel(height, width, length, weight);
       return RedirectToAction("Index");
     }
 

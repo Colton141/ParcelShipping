@@ -10,7 +10,10 @@
   {
     @foreach (Parcel parcel in Model)
     {
-      <li>@parcel.GetDescription()</li>
+      <li>@parcel.Height inches</li>
+      <li>@parcel.Width inches</li>
+      <li>@parcel.Length inches</li>
+      <li>@parcel.Weight lbs</li>
     }
   }
 
