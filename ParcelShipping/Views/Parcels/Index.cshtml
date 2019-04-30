@@ -1,0 +1,19 @@
+@using ParcelShipping.Models;
+
+<h1>List Your Shippment!</h1>
+<ul>
+  @if (Model.Count == 0)
+  {
+    <p>There are currently no shippments!</p>
+  }
+  @if(Model.Count != 0)
+  {
+    @foreach (Parcel parcel in Model)
+    {
+      <li>@parcel.GetDescription()</li>
+    }
+  }
+
+
+</ul>
+<a href="/parcels/new">Add a shippment to list it.</a>
